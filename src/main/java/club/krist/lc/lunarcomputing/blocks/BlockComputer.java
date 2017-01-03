@@ -5,7 +5,10 @@ import club.krist.lc.lunarcomputing.tile.TileComputer;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -17,7 +20,12 @@ import net.minecraft.world.World;
 
 public class BlockComputer extends Block implements ITileEntityProvider{
 
+    public static final int OFF = 0;
+    public static final int ON = 1;
+    public static final int BLINKING = 2;
+
     public static final PropertyDirection FACING = PropertyDirection.create("facing");
+    public static final PropertyInteger STATE = PropertyInteger.create("state", OFF, BLINKING);
 
     public BlockComputer() {
         super(Material.ROCK);
@@ -25,6 +33,7 @@ public class BlockComputer extends Block implements ITileEntityProvider{
         setRegistryName(Reference.LCBlocks.COMPUTER.getRegistryName());
 
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        setDefaultState(blockState.getBaseState().withProperty(STATE, OFF));
     }
 
     @Override
@@ -36,6 +45,7 @@ public class BlockComputer extends Block implements ITileEntityProvider{
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         world.setBlockState(pos, state.withProperty(FACING, getFacingFromEntity(pos, placer)), 2);
+        world.setBlockState(pos, state.withProperty(STATE, OFF), 2);
     }
 
     public static EnumFacing getFacingFromEntity(BlockPos clickedBlock, EntityLivingBase entity) {
@@ -57,7 +67,7 @@ public class BlockComputer extends Block implements ITileEntityProvider{
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, FACING);
+        return new BlockStateContainer(this, FACING, STATE);
     }
     //endregion
 }

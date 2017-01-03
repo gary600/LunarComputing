@@ -13,6 +13,23 @@
       "east": {"y": 90},
       "up": {"x": -90},
       "down": {"x": 90}
+    },
+    "state": {
+      "0": {
+        "textures": {
+          "north": "lunarcomputing:blocks/computer_front_off"
+        }
+      },
+      "1": {
+        "textures": {
+          "north": "lunarcomputing:blocks/computer_front_on"
+        }
+      },
+      "2": {
+        "textures": {
+          "north": "lunarcomputing:blocks/computer_front_on_blink"
+        }
+      }
     }
   }
 }

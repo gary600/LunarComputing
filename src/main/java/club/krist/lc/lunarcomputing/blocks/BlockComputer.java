@@ -1,5 +1,6 @@
 package club.krist.lc.lunarcomputing.blocks;
 
+import club.krist.lc.lunarcomputing.LunarComputing;
 import club.krist.lc.lunarcomputing.Reference;
 import club.krist.lc.lunarcomputing.tile.TileComputer;
 import net.minecraft.block.Block;
@@ -29,6 +30,8 @@ public class BlockComputer extends Block implements ITileEntityProvider{
 
     public BlockComputer() {
         super(Material.ROCK);
+        setCreativeTab(LunarComputing.lunarComputingTab);
+
         setUnlocalizedName(Reference.LCBlocks.COMPUTER.getUnlocalizedName());
         setRegistryName(Reference.LCBlocks.COMPUTER.getRegistryName());
 
@@ -45,7 +48,7 @@ public class BlockComputer extends Block implements ITileEntityProvider{
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         world.setBlockState(pos, state.withProperty(FACING, getFacingFromEntity(pos, placer)), 2);
-        world.setBlockState(pos, state.withProperty(STATE, OFF), 2);
+        world.setBlockState(pos, state.withProperty(STATE, OFF));
     }
 
     public static EnumFacing getFacingFromEntity(BlockPos clickedBlock, EntityLivingBase entity) {

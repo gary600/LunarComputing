@@ -74,5 +74,5 @@ public class BlockComputer extends Block implements ITileEntityProvider {
 
     // Make sure sides adjacent to other blocks render
     @Override
-    public boolean isOpaqueCube(IBlockState state) {return false;}
+    public boolean isOpaqueCube(IBlockState state) { return false; }
 }

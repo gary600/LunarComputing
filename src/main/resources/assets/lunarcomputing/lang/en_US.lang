@@ -1,5 +1,6 @@
 item.cpu.name=CPU
 item.screen.name=Screen
+item.manual.name=LunarComputing Manual
 
 tile.computer.name=Computer
 

@@ -12,7 +12,8 @@ public class Reference {
 
     public static enum LCItems {
         CPU("cpu", "cpu"),
-        SCREEN("screen", "screen");
+        SCREEN("screen", "screen"),
+        MANUAL("manual", "manual");
 
         private String unlocalizedName;
         private String registryName;

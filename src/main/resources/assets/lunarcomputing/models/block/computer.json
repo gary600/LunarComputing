@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "lunarcomputing:blocks/computer_side",
+    "down": "lunarcomputing:blocks/computer_bottom",
+    "up": "lunarcomputing:blocks/computer_top",
+    "east": "lunarcomputing:blocks/computer_side",
+    "west": "lunarcomputing:blocks/computer_side",
+    "north": "lunarcomputing:blocks/computer_front_on",
+    "south": "lunarcomputing:blocks/computer_side"
+  }
+}

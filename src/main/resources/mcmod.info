@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "lunarcomputing",
+    "name": "LunarComputing",
+    "description": "Programmable computers, in Minecraft!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "lc.krist.club",
+    "updateUrl": "",
+    "authorList": [
+      "Lur"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

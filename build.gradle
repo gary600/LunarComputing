@@ -12,10 +12,13 @@ buildscript {
 }
 
 apply plugin: "net.minecraftforge.gradle.forge"
+apply plugin: "java"
 
 version = modVersion
 group = modGroup
 archivesBaseName = modBaseName
+
+sourceCompatibility = 1.7
 
 minecraft {
     version = project.forgeVersion

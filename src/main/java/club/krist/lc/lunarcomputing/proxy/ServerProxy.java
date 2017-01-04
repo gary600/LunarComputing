@@ -1,8 +1,9 @@
 package club.krist.lc.lunarcomputing.proxy;
 
-public class ServerProxy implements CommonProxy {
+public class ServerProxy extends CommonProxy {
 
-    @Override
-    public void init() {}
+    public void init() {
+        super.init();
+    }
 
 }

@@ -8,6 +8,9 @@ public class BlockBase extends Block {
 
     public BlockBase() {
         super(Material.ROCK);
+        setResistance(10.0F);
+        setHardness(1.5F);
+        setHarvestLevel("pickaxe", 1);
         setCreativeTab(LunarComputing.lunarComputingTab);
     }
 

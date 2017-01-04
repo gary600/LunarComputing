@@ -1,1 +1,6 @@
 langauge: java
+sudo: false
+cache:
+  directories:
+  - $HOME/.gradle
+  - $HOME/.m2

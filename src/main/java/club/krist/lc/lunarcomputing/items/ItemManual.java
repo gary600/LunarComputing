@@ -2,7 +2,6 @@ package club.krist.lc.lunarcomputing.items;
 
 import club.krist.lc.lunarcomputing.LunarComputing;
 import club.krist.lc.lunarcomputing.Reference;
-import club.krist.lc.lunarcomputing.gui.GuiManual;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
@@ -26,7 +25,7 @@ public class ItemManual  extends ItemBase{
     public EnumActionResult onItemUseFirst(ItemStack stack, EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand)
     {
         if (world.isRemote)
-            player.openGui(LunarComputing.instance, 0, world, (int) player.posX, (int) player.posY, (int) player.posZ);
+            player.openGui(LunarComputing.instance, 1, world, (int) player.posX, (int) player.posY, (int) player.posZ);
         return EnumActionResult.SUCCESS;
     }
 

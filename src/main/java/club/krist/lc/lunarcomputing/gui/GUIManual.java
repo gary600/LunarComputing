@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * A GUI that displays the LunarComputing manual
  */
-public class GuiManual extends GuiScreen {
+public class GUIManual extends GuiScreen {
 
     public static final int IMG_WIDTH = 160;
     public static final int IMG_HEIGHT = 320;

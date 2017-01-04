@@ -1,7 +1,13 @@
 package club.krist.lc.lunarcomputing.proxy;
 
-public interface CommonProxy {
+import club.krist.lc.lunarcomputing.LunarComputing;
+import club.krist.lc.lunarcomputing.gui.LCGUIHandler;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
-    void init();
+public class CommonProxy {
+
+    public void init() {
+        NetworkRegistry.INSTANCE.registerGuiHandler(LunarComputing.instance, new LCGUIHandler());
+    }
 
 }

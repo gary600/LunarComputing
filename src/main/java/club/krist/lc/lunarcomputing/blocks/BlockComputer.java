@@ -39,7 +39,7 @@ public class BlockComputer extends Block implements ITileEntityProvider {
 
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileComputer(this);
+        return new TileComputer();
     }
 
     //region Directional Placement

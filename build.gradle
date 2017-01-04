@@ -37,17 +37,18 @@ repositories {
     mavenCentral()
     maven {
         name = "squiddev"
-        url = "https://dl.binray.com/squiddev/maven"
+        url = "https://dl.bintray.com/squiddev/maven"
     }
 }
 
 dependencies {
-    compile('org.squiddev:cctweaks-lua:1.2.0') {
+    compile('org.squiddev:cctweaks-lua:1.2.4') {
         exclude group: 'ComputerCraft'
         exclude group: 'com.google.guava'
         exclude group: 'net.minecraftforge'
         exclude module: 'ConfigGen'
         exclude group: 'org.ow2.asm'
+        exclude group: 'net.sandius.rembulan'
     }
 }
 

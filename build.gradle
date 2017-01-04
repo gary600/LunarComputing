@@ -43,7 +43,11 @@ repositories {
 
 dependencies {
     compile('org.squiddev:cctweaks-lua:1.2.0') {
+        exclude group: 'ComputerCraft'
+        exclude group: 'com.google.guava'
+        exclude group: 'net.minecraftforge'
         exclude module: 'ConfigGen'
+        exclude group: 'org.ow2.asm'
     }
 }
 

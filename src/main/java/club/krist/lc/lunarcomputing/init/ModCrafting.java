@@ -38,6 +38,10 @@ public class ModCrafting {
                 'S', ModItems.screen,
                 'R', Items.REDSTONE,
                 'C', ModItems.cpu);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.manual, 1),
+                Items.BOOK,
+                ModItems.cpu // TEMPORARY!!!
+                );
     }
 
 }

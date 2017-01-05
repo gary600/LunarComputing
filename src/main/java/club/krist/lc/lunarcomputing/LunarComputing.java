@@ -3,6 +3,7 @@ package club.krist.lc.lunarcomputing;
 import club.krist.lc.lunarcomputing.init.ModBlocks;
 import club.krist.lc.lunarcomputing.init.ModCrafting;
 import club.krist.lc.lunarcomputing.init.ModItems;
+import club.krist.lc.lunarcomputing.init.ModTiles;
 import club.krist.lc.lunarcomputing.proxy.CommonProxy;
 
 import club.krist.lc.lunarcomputing.tile.TileComputer;
@@ -47,7 +48,7 @@ public class LunarComputing {
         proxy.init();
         ModCrafting.register();
 
-        GameRegistry.registerTileEntity(TileComputer.class, "lcTileComputer");
+        ModTiles.register();
     }
 
     @EventHandler
